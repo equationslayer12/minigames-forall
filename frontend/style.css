@@ -1,35 +1,40 @@
 body 
 {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  overflow: hidden;
+  background-image: url('../frontend/Media/Background.jpeg');
+  background-size:contain;
+  background-repeat: no-repeat;
 }
 
-.game-title {
-  text-align: center;
-}
-
-.board 
+.game-title 
 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.board {
   display: grid;
   grid-template-columns: repeat(3, 250px);
   grid-gap: 10px;
   margin-top: 50px;
 }
-.cell 
-{
-  width: 250px;
+
+.cell {
+  width: 245px;
   height: 250px;
   font-size: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #ccc;
+  border: 3px solid #ccc;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
-.cell:hover 
-{
+
+.cell:hover {
   background-color: #b4d3ff;
 }
 
