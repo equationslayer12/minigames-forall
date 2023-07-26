@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Game</title>
+</head>
+<body>
+  <button id="pause-btn" class="button"><b>Pause</b></button>
+
+  <header class="game-title">
+    <h1>Tic Tac Toe</h1>
+  </header>
+  
+  
+
+  <div id="board-container">
+    <div class="board" id="board">
+      <div class="cell" onclick="makeMove(0)"></div>
+      <div class="cell" onclick="makeMove(1)"></div>
+      <div class="cell" onclick="makeMove(2)"></div>
+      <div class="cell" onclick="makeMove(3)"></div>
+      <div class="cell" onclick="makeMove(4)"></div>
+      <div class="cell" onclick="makeMove(5)"></div>
+      <div class="cell" onclick="makeMove(6)"></div>
+      <div class="cell" onclick="makeMove(7)"></div>
+      <div class="cell" onclick="makeMove(8)"></div>
+    </div>  
+  </div>
+
+  <div id="pause-menu">
+    <p><b>Menu</b></p>
+    <ul>
+      <li><button class="menu-btn" onclick="toggleMenu()"><b>Back to Game</b></button></li>
+
+      <li>
+        <audio id="audio" autoplay loop controls>
+          <source src="../frontend/gamePlayTune.mp3" type="audio/mpeg">
+        </audio>
+      </li>  
+
+      <li>
+        <label for="volume-slider">Volume: </label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+      </li>
+
+      <li><button class="menu-btn" id="quit-btn" onclick="Return()"><B>Quit Game</B></button></li>    
+
+    </ul>
+  </div>
+</body>
+</html>
