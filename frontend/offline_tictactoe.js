@@ -99,7 +99,7 @@ function makeMove(cellIndex)
 {
   if (board[cellIndex] === '' && isPlayerTurn) 
   {
-    board[cellIndex] = 'X'; // Assume player plays with 'X'
+    board[cellIndex] = 'X';
     displayBoard();
     
     if (checkWin('X')) 
@@ -155,40 +155,38 @@ function makeAIMove()
   }
 }
 
-// Function to reset the board
-function resetBoard() {
+function resetBoard() 
+{
   board = ['', '', '', '', '', '', '', '', ''];
   isPlayerTurn = true;
   displayBoard();
 }
 
-// Function to display the board on the web page
-function displayBoard() {
+function displayBoard() 
+{
   const cells = document.getElementsByClassName('cell');
   for (let i = 0; i < cells.length; i++) {
     cells[i].textContent = board[i];
   }
 }
 
-// Function to toggle the pause menu
-function toggleMenu() {
+function toggleMenu() 
+{
   const pauseMenu = document.getElementById('pause-menu');
   pauseMenu.classList.toggle('show');
 }
 
-// Function to return to the game (hide pause menu)
-function Return() {
+
+function Return() 
+{
   toggleMenu();
 }
 
-// Event listener for the pause button
 const pauseButton = document.getElementById('pause-btn');
 pauseButton.addEventListener('click', toggleMenu);
 
-// Event listener for the volume slider (you can implement this functionality)
 const volumeSlider = document.getElementById('volume-slider');
 volumeSlider.addEventListener('input', () => {
-  // Implement volume control if needed
 });
 
   
